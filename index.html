@@ -22,33 +22,7 @@
       <h1 id="loginTitle">Tasgheel POS System</h1>
       <p class="subtitle" id="subtitle">Powered by itqan</p>
 
-      <!-- Activation Status -->
-      <div id="activationStatus" class="activation-status not-activated">
-        <span id="statusText">System Not Activated</span>
-      </div>
-      
-      <!-- License Activation Form -->
-      <div id="licenseForm">
-        <h3 id="activationTitle">System Activation Required</h3>
-        <div class="form-group">
-          <label id="licenseKeyLabel">License Key:</label>
-          <input type="text" id="licenseKey" placeholder="Enter your license key">
-        </div>
-        <div class="form-group">
-          <label id="businessNameLabel">Business Name:</label>
-          <input type="text" id="businessName" placeholder="Enter your business name">
-        </div>
-        <button type="button" class="btn btn-primary" onclick="activateLicense()" id="activateBtn">🔑 Activate License</button>
-        <div id="licenseError" class="error"></div>
-      </div>
-
-      <!-- License Info (shown when activated) -->
-      <div id="licenseInfo" class="license-info hidden">
-        <h4 id="licenseInfoTitle">License Information</h4>
-        <p><strong id="businessLabel">Business:</strong> <span id="businessDisplay"></span></p>
-        <p><strong id="activatedLabel">Activated:</strong> <span id="activationDate"></span></p>
-        <p><strong id="statusLabel">Status:</strong> <span style="color: #27ae60;">✅ Active</span></p>
-      </div>
+     
 
       <!-- Login Form (shown when activated) -->
       <form class="login-form hidden" id="loginForm">
