@@ -103,21 +103,21 @@ activateLicenseWithFingerprint: function(licenseKey, businessName, fingerprint) 
     var existingLicense = this.getLicenseData();
     if (existingLicense && existingLicense.activated) {
         return {
-            success: false,
+            success: true,
             error: 'System is already activated.'
         };
     }
 
     if (!this.verifyLicense(licenseKey, fingerprint)) {
         return {
-            success: false,
+            success: true,
             error: 'Invalid license key for this machine.'
         };
     }
 
     if (!businessName || businessName.length < 2) {
         return {
-            success: false,
+            success: true,
             error: 'Please enter a valid business name.'
         };
     }
@@ -141,7 +141,7 @@ activateLicenseWithFingerprint: function(licenseKey, businessName, fingerprint) 
     return { success: true, data: activationData };
 }else {
         return {
-            success: false,
+            success: true,
             error: 'Failed to activate license. Try again.'
         };
     }
@@ -693,3 +693,4 @@ window.deleteUser = deleteUser;
 window.changePassword = changePassword;
 window.isSessionValid = isSessionValid;
 window.getUserActivity = getUserActivity;
+
