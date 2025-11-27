@@ -148,6 +148,21 @@
       document.getElementById("feature6").textContent = t.feature6;
       document.getElementById("footerText").textContent = t.enhancedSecurity;
     }
+<script>
+  // FORCE LOGIN FORM TO ALWAYS SHOW (BYPASS LICENSE)
+  document.addEventListener("DOMContentLoaded", () => {
+      // إخفاء أي عناصر تفعيل (لو موجودة في DOM)
+      const activationBox = document.getElementById("activationBox");
+      if (activationBox) activationBox.style.display = "none";
+
+      // إظهار فورم تسجيل الدخول فورًا
+      const loginForm = document.getElementById("loginForm");
+      if (loginForm) loginForm.classList.remove("hidden");
+      
+      // منع auth.js من محاولة إظهار شاشة تفعيل
+      localStorage.setItem("pos_license_force", "ok");
+  });
+</script>
 
     function initLogin() {
       const fingerprintField = document.getElementById('fingerprintDisplay');
